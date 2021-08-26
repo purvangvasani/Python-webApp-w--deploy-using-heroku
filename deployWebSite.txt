@@ -1,0 +1,40 @@
+step 1: Create a virtual environment
+    python3.8 -m venv {virtual} <== name of folder
+
+step 2: keep your project folder besides the virtual env folder
+
+step 3: Install initial python libraries required for the project 
+    virtual/bin/pip3 install flask <== For example
+
+step 4: Create a heroku account
+
+step 5: Login through project(where your script.py file) into heroku
+    heroku login
+
+step 6: create your app
+    heroku create demo162
+
+step 7: freeze your python library dependency into requirements.txt under into your project folder
+    ../virtual/bin/pip install gunicorn
+    ../virtual/bin/pip freeze > requirements.txt <= will create file in your project directory
+
+step 8: create a Procfile in your project directory
+    add these line-> web: gunicorn script:app
+
+step 9: create a runtime.txt
+    specify python version available on heroku 
+
+step 10: start git 
+    git init
+    git add .
+    git commit -m ""
+
+step 11: tell heroku on which app you want to deploy
+    heroku git:remote --app demo162
+
+step 12: push the changes
+    git push heroku master
+
+step 13: Done
+    heroku open or open directly from browser
+    heroku info <-- for more details
