@@ -1,11 +1,6 @@
 from flask import Flask, render_template, request
-#from requests import get
-#from json import dump
 from os import getcwd, path
-#from os import mkdir
-#from tqdm import tqdm
-#from bs4 import BeautifulSoup
-#from multiprocessing import Pool, Process
+
 app = Flask(__name__)
 
 
